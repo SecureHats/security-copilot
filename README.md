@@ -1,1 +1,1 @@
-# copilot-skills
+# Microsoft Security CoPilot plugins

@@ -1,0 +1,24 @@
+openapi: 3.0.0
+info:
+  title: AbuseIPDB
+  version: 1.0.0
+servers:
+- url: https://api.abuseipdb.com
+paths:
+  "/api/v2/check":
+    get:
+      tags:
+      - default
+      summary: This tool checks if an IP address is safe or malicious.
+      parameters:
+      - name: ip
+        in: query
+        schema:
+          type: string
+        required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+components: {}

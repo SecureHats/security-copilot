@@ -1,0 +1,16 @@
+Descriptor:
+  Name: AbuseIPDB
+  DisplayName: AbuseIPDB
+  Description: This tool checks if an IP address is safe or malicious.
+  SupportedAuthTypes:
+    - ApiKey
+  Authorization:
+    Type: APIKey
+    Key: apiKey
+    Location: QueryParams
+    AuthScheme: ''
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: 
