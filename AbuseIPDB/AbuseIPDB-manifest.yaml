@@ -1,6 +1,6 @@
 Descriptor:
-  Name: AbuseIPDB
-  DisplayName: AbuseIPDB
+  Name: Check AbuseIPDB
+  DisplayName: Check AbuseIPDB
   Description: This tool checks if an IP address is safe or malicious.
   SupportedAuthTypes:
     - ApiKey

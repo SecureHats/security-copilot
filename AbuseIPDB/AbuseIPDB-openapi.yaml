@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: AbuseIPDB
+  title: Check AbuseIPDB
   version: 1.0.0
 servers:
 - url: https://api.abuseipdb.com
