@@ -51,16 +51,22 @@ SkillGroups:
       OpenApiSpecUrl: https://<path-to-url>/openapi.yaml
 ```
 
-Now that we understand what the minimum required properties are for a manifest file, we can continue to configure the manifest for our first Microsoft Security CoPilot plugin.
+### Creating our first manifest
+
+Now that we know what info we need for a manifest file, let's set it up for our first Microsoft Security CoPilot plugin.  
+1. Create a new file named `lesson1-manifest.yaml`
+2. Copy and past the following example it to the lesson1-manifest.yaml
 
 ```yaml
 Descriptor:
   Name: BasicRequest
-  DisplayName: Lesson 1 - My First Plugin (BasicRequest)
+  DisplayName: My First Plugin (BasicRequest)
   Description: Lesson 1 - Plugin for requesting http headers from the incoming request.
 
 SkillGroups:
   - Format: API
     Settings:
-      OpenApiSpecUrl: https://github.com/SecureHats/security-copilot/blob/da70fb9b970d5b95faff462dff8491d46ac7d71a/Lesson%201/openapi.yaml
+      OpenApiSpecUrl: https://raw.githubusercontent.com/SecureHats/security-copilot/da70fb9b970d5b95faff462dff8491d46ac7d71a/Lesson%201/openapi.yaml
 ```
+
+3. 
