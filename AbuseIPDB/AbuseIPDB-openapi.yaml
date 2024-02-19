@@ -7,9 +7,6 @@ servers:
 paths:
   "/api/v2/check":
     get:
-      tags:
-      - default
-      summary: This tool checks if an IP address is safe or malicious.
       parameters:
       - name: ip
         in: query
@@ -21,4 +18,12 @@ paths:
           description: Successful response
           content:
             application/json: {}
-components: {}
+      summary: This tool checks if an IP address is safe or malicious.
+components:
+ securitySchemes:
+   api_key:
+     type: apiKey
+     in: header
+     name: hibp-api-key
+security:
+  - api_key: []
