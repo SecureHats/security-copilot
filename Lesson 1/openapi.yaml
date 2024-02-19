@@ -1,0 +1,20 @@
+openapi: 3.0.0
+
+info:
+    title: lesson1-manifest
+    description: Lesson 1 - Request basic headers information.
+    version: "1.0.0"
+
+servers:
+    - url: https://httpbin.org/
+
+paths:
+    /headers:
+        get: 
+            operationId: Lesson1
+            summary: Return the HTTP headers from the incoming request.
+            responses:
+                200:
+                    description: Successful authentication.
+                401:
+                    description: Unsuccessful authentication.
