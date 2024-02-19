@@ -10,9 +10,12 @@ We will start with a very basic plugin and throughout the lessons advance to mor
 ## Table of Contents
 
 [Lesson 1 - Basic Plugin](https://github.com/SecureHats/security-copilot/blob/main/Lesson%201/README.md) - Posted Februari 19, 2024
-If you have any suggestions, please open an issue.
 
+## Not happy? :-(
 
+If you encounter any issues, or have suggestions for improvements, feel free to open an Issue
+
+[Create Issue](../../issues/new/choose)
 
 <!-- This SecureHats repository is used to organize project information and artifacts. 
 
@@ -35,16 +38,6 @@ _italic_
 
 **bold**
 
-inline `code-example` 
+inline `code-example`
 
  -->
-
-## Not happy? :-(
-
-If you encounter any issues, or have suggestions for improvements, feel free to open an Issue
-
-[Create Issue](../../issues/new/choose)
-
-
-
-
