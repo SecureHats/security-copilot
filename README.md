@@ -9,8 +9,7 @@ We will start with a very basic plugin and throughout the lessons advance to mor
 
 ## Table of Contents
 
-[Lesson 1 - Basic Plugin](https://github.com/SecureHats/security-copilot/blob/main/Lesson%201/README.md)
- - Posted Februari 19, 2024
+[Lesson 1 - Basic Plugin](https://github.com/SecureHats/security-copilot/blob/main/Lesson%201/README.md) - Posted Februari 19, 2024
 If you have any suggestions, please open an issue.
 
 
