@@ -7,10 +7,10 @@ Descriptor:
   Authorization:
     Type: APIKey
     Key: apiKey
-    Location: QueryParams
+    Location: Header
     AuthScheme: ''
 
 SkillGroups:
   - Format: API
     Settings:
-      OpenApiSpecUrl: 
+      OpenApiSpecUrl: https://raw.githubusercontent.com/SecureHats/security-copilot/af5a0d915f16aa98b34e57e57328be10e48d0d5a/AbuseIPDB/AbuseIPDB-openapi.yaml
