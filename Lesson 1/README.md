@@ -1,3 +1,5 @@
+![logo](/images/sh-banner.png)
+=========
 # Microsoft CoPilot for Security
 
 ## Lesson 1
