@@ -7,11 +7,10 @@ This repository contains lessons as part of the Security CoPilot Walk trough ser
 
 We will start with a very basic plugin and throughout the lessons advance to more difficult scenario's
 
-<br>
-    <H2>Table of Contents</H2>
-<br>
+## Table of Contents
 
-[Lesson 1](Basic Plugin) - Posted Februari 19, 2024
+[Lesson 1 - Basic Plugin](https://github.com/SecureHats/security-copilot/blob/main/Lesson%201/README.md)
+ - Posted Februari 19, 2024
 If you have any suggestions, please open an issue.
 
 
