@@ -4,8 +4,8 @@
 
 ## Lesson 2
 
-In this first lesson, we'll cover the basics of creating a plugin for Microsoft Security CoPilot. By the end, you'll understand the essential parts needed to make a plugin and be able to use the template we provide.
+In our initial lesson, we've tackled the fundamentals of making a plugin for Microsoft Security CoPilot. We started by crafting a manifest file and connecting it to an online OpenAPI Specification.  
+Now, we will dive into the simple setup of an OpenAPI specification file. We will also create a template that we can utilize in upcoming lessons.
 
-Microsoft Security CoPilot comes with some pre-made plugins that users or organizations can turn on. But you can also make your own plugin, which is what we'll focus on.
+# Lesson 2
 
-Creating a plugin for an AI platform might seem daunting at first. I felt the same way, but breaking it down into smaller steps made it much more manageable. Let's dive in and make it easier to understand.# Lesson 2
