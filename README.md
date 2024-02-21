@@ -3,9 +3,10 @@
 ![logo](./images/sh-banner.png)
 =========
 
-This repository contains lessons as part of the Security CoPilot Walk trough series.  The series is a starting point for anyone that is willing to master the skills of creating custom Plugins for Microsoft Security CoPilot.  
+This repository contains lessons as part of the Microsoft CoPilot for Security walk trough series.  
+The series is a starting point for anyone willing to master the skills of creating custom Plugins for Microsoft Security CoPilot.  
 
-We will start with a very basic plugin and throughout the lessons advance to more difficult scenario's
+We will start with a very basic plugin and throughout the lessons advance to the more difficult scenarios
 
 ## Table of Contents
 
@@ -13,7 +14,7 @@ We will start with a very basic plugin and throughout the lessons advance to mor
 
 ## Not happy? :-(
 
-If you encounter any issues, or have suggestions for improvements, feel free to open an Issue
+If you encounter any issues or have suggestions for improvements, feel free to open an Issue
 
 [Create Issue](../../issues/new/choose)
 
