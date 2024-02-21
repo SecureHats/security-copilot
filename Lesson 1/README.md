@@ -4,16 +4,16 @@
 
 ## Lesson 1
 
-In this first lesson, we'll cover the basics of creating a plugin for Microsoft Security CoPilot. By the end, you'll understand the essential parts needed to make a plugin and be able to use the template we provide.
+In this first lesson, we'll cover the basics of creating a plugin for Microsoft CoPilot for Security. By the end, you'll understand the essential parts needed to make a plugin and be able to use the template we provide.
 
-Microsoft Security CoPilot comes with some pre-made plugins that users or organizations can turn on. But you can also make your own plugin, which is what we'll focus on.
+Microsoft CoPilot for Security comes with some pre-made plugins that users or organizations can turn on. But you can also make your own plugin, which is what we'll focus on.
 
 Creating a plugin for an AI platform might seem daunting at first. I felt the same way, but breaking it down into smaller steps made it much more manageable. Let's dive in and make it easier to understand.
 
 
 ## Developing a Plugin
 
-A plugin for Microsoft Security CoPilot consists of two main components:
+A plugin for Microsoft CoPilot for Security consists of two main components:
 
 OpenAPI Specification:  
   This component describes how the API of the plugin works. It defines the endpoints, request and response formats, authentication mechanisms, and any other relevant details about the plugin's API.  
@@ -28,11 +28,11 @@ Microsoft Copilot uses the following process flow when the user asks a question 
 
 ![alt text](/images/data-flow.png)
 
-In our first example we will use a public OpenAPI Spec and focus on creating a Plugin manifest
+In our first example, we will use a public OpenAPI Spec and focus on creating a Plugin manifest
 
 ### Plugin manifest
 The plugin manifest can be written in `JSON` or `YAML` format, but we'll stick to using YAML for the plugin manifest.  
-YAML is a human-readable languafe that is often used for writing configuration files. It is a clear and easy-to-read format.  
+YAML is a human-readable language that is often used for writing configuration files. It is a clear and easy-to-read format.  
 So, for consistency and simplicity, we'll use YAML instead of JSON throughout the lessons.
 
 The YAML manifest starts with a `Descriptor` key, which is a mapping that contains three keys: `Name`, `DisplayName`, and `Description`.  
@@ -62,7 +62,7 @@ SkillGroups:
 
 ### Creating our first manifest
 
-Now that we know what info we need for a manifest file, let's set it up for our first Microsoft Security CoPilot plugin.  
+Now that we know what info we need for a manifest file, let's set it up for our first Microsoft CoPilot for Security plugin.  
 1. Create a new file named `manifest.yaml`
 2. Copy and past the following example it to the manifest.yaml
 
@@ -95,12 +95,12 @@ Congratulations, you have now added your first **custom plugin**
 
 ## Testing the custom plugin
 
-Now that we've got our shiny new plugin installed in Microsoft Security CoPilot, it's time to try it out and see how well it works.  
+Now that we've got our shiny new plugin installed in Microsoft CoPilot for Security, it's time to try it out and see how well it works.  
 Let's kick off a new session and try adding the following request.
 
 ![prompt-message](/images/prompt-message.png)
 
-Microsoft Security CoPilot successfully figured out and used the right plugin.  
+Microsoft CoPilot for Security successfully figured out and used the right plugin.  
 It did this because we included a specific word, `BasicRequest`, in our question earlier.
 
 Now, if we examine the results more closely from what we asked before, we find these specific details:
@@ -111,7 +111,7 @@ Now, if we examine the results more closely from what we asked before, we find t
 2. Step 2 is not showing any details, but this is the step where the API call to the provided `uri` was executed. 
 > NOTE: The API endpoint is described in the OpenAPI Specification that is referenced in the manifest [see openapi.yaml](https://github.com/SecureHats/security-copilot/blob/da70fb9b970d5b95faff462dff8491d46ac7d71a/Lesson%201/openapi.yaml)
 
-3. In the last step the response in processed and shows us the header information from the call tho the httpbin.org API
+3. In the last step the response in processed and shows us the header information from the call to the httpbin.org API
 
 ## Summary
 
@@ -119,4 +119,4 @@ In this first lesson about Microsoft CoPilot for Security, we've covered the bas
 With our plugin added, we tested it by making a request.  
 CoPilot successfully utilized the plugin, thanks to the keyword "BasicRequest" we included earlier.  Examining the results, we see the plugin's display name, details of the API call, and the response's header information.  
 </br>
-By following these steps, you've successfully created and integrated your first custom plugin into Microsoft Security CoPilot!
+By following these steps, you've successfully created and integrated your first custom plugin into Microsoft CoPilot for Security!
