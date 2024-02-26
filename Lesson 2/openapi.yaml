@@ -3,7 +3,7 @@ openapi: 3.0.0
 info:
     title: lesson2-iplookup
     description: Lesson 2 - Basic request to IP lookup API.
-    version: "0.1.0"
+    version: "0.2.0"
 
 servers:
     - url: https://freeipapi.com/api/
@@ -35,7 +35,6 @@ components:
                 ipAddress:
                     type: string
                     description: The IP address
-                    description: The longitude
                 countryName:
                     type: string
                     description: The country
