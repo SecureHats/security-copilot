@@ -21,9 +21,11 @@ paths:
             operationId: getwizards
             summary: Retrieve Harry Potter wizards
             parameters:
-            - name: FirstName
-                in: query
-                required: true
+                - in: query
+                    name: FirstName
+                    schema:
+                        type: string
+                    required: true
             responses:
                 "200":
                 description: Success
