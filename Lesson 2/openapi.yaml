@@ -15,23 +15,5 @@ paths:
             responses:
                 "200":
                     description: OK
-                    content:
-                        application/json:
-                            schema:
-                                $ref: "#/components/schemas/metadata"
                 401:
                     description: Unsuccessful authentication.
-components:
-    schemas:
-        metadata:
-            type: object
-            properties:
-                ip:
-                    type: string
-                    description: unique reference number.
-                country_code:
-                    type: string
-                    description: URL of the request.
-                asn:
-                    type: string
-                    description: Autonomous system number (ASN).
