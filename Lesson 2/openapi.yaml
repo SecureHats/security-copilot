@@ -32,9 +32,6 @@ components:
                 country_code:
                     type: string
                     description: URL of the request.
-                country_code:
-                    type: string
-                    description: Two-character country code based on ISO 3166.
                 asn:
                     type: string
                     description: Autonomous system number (ASN).
