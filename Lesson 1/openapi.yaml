@@ -14,7 +14,33 @@ paths:
             operationId: Lesson1
             summary: Return the HTTP headers from the incoming request.
             responses:
-                200:
-                    description: Successful authentication.
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/metadata"
                 401:
                     description: Unsuccessful authentication.
+
+components:
+    schemas:
+        metadata:
+            type: object
+            properties:
+                id:
+                    type: string
+                    description: unique reference number.
+                url:
+                    type: string
+                    description: URL of the request.
+                url_status:
+                    type: string
+                    description: Status of the URL.
+                host:
+                    type: string
+                    description: The extracted host of the malware URL.
+                date_added:
+                    type: string
+                    description: The date the malware URL was added to the feed.
+```

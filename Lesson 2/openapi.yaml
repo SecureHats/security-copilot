@@ -1,8 +1,8 @@
 openapi: 3.0.0
 
 info:
-    title: lesson2-weather
-    description: Lesson 2 - Basic request to weather API.
+    title: lesson2-iplookup
+    description: Lesson 2 - Basic request to IP lookup API.
     version: "0.1.0"
 
 servers:
