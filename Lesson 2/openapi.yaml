@@ -14,11 +14,11 @@ paths:
             operationId: lookupIpAddressGeolocation
             summary: Lookup IP Address Geolocation information
             parameters:
-                - in: path
+                - in: query
                   name: ipaddress
                   schema:
                       type: string
-                  required: true
+                  required: false
                   description: The ip address to lookup
             responses:
                 "200":
