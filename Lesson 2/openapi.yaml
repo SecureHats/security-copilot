@@ -1,22 +1,29 @@
 openapi: 3.0.0
 
 info:
-    title: lesson2-iplookup
+    title: Lesson 2 lookup harry potter houses
     description: Lesson 2 - Basic request to IP lookup API.
     version: "0.2.2"
 
 servers:
-    - url: http://ip-api.com/
+    - url: https://wizard-world-api.herokuapp.com/
 
 paths:
-    /json/:
+    /houses:
         get:
             operationId: gethouses
             summary: Retrieve all Harry Potter houses
+            responses:
+                "200":
+                description: Success
+    /wizards:
+        get:
+            operationId: getwizards
+            summary: Retrieve Harry Potter wizards
             parameters:
-              - name: ip
+                - name: FirstName
                 in: query
                 required: true
             responses:
                 "200":
-                    description: Success
+                description: Success

@@ -24,26 +24,27 @@ OAS is like a blueprint or agreement for APIs. It explains what an API does, wha
 This means APIs built using OAS can talk to each other even if they're written in different programming languages because OAS is designed to work with any language and can be easily understood by machines.  
 <br>
 
-### OpenAPI Specification
+## OpenAPI Specification
 
 The OAS can contain many different attributes, but only a few are required for a custom plugin
 In our example we will use the following attributes:
 - Info Object
 - Server Object
 - Paths Object
+- Parameter Object (optional)
 
-### The Info object
+## The Info object
 
 In the **info object** is like a summary of key details about the API. It usually includes things like the title, a brief description, the version number, and links to stuff like licenses and terms of service.  
 The only things that are **required** in there are the `title` and `version`. It's a good idea to include a description too. You can use markdown to format the description if you want.    
 <br>
 ```yaml
 info:
-    title: User Request
-    version: "0.2.0"
+    title: Wizard World Api
+    version: "0.1.0"
 ```
 
-### The Server object
+## The Server object
 
 In the **servers object**, we can list one or more main paths used in requests to the API.  
 This section is in array format, so each path needs to be specified separately, unlike the values in the info section.  
@@ -51,11 +52,11 @@ The basepath is the part of the web address that comes before the specific endpo
 <br>
 ```yaml
 servers:
-    - url: https://httpbin.org/
-      description: development server
+    - url: https://api.example.com/
+      description: Harry Potter information provider
 ```
 
-### The Paths object
+## The Paths object
 
 The **paths object** can be seen as a roadmap for the endpoints available within the API.  
 It provided details on how to access the endpoints and what actions you can perform.  
@@ -67,16 +68,16 @@ To break this section a bit more down into digestible chunks, I will describe th
 - operation object
 ...
 
-### path
+## path
 
 The `path` is the relative URL of the API endpoint. It should start with a forward slash `/` and end with a double colon `:`  
 <br>
 ```yaml
 paths:
-    /users:
+    /houses:
 ```
 
-### HTTP Methods
+## HTTP Methods
 
 Each `path` should specify one or more HTTP methods that are allowed to be used with the endpoint.  
 Each HTTP method represents a different action that can be performed on the endpoint.  
@@ -84,16 +85,16 @@ Common HTTP methods are `GET`, `POST`, `PUT`, `DELETE`
 <br>
 ```yaml
 paths:
-  /users:
+  /houses:
     get:
 ```
 
-### Operation Object
+## Operation Object
 
 For each HTTP method specified, there must be an associated operation object containing additional information about the operation.  
 Examples of these operation objects are parameters, request body, responses, etc.  
 <br>
-The only required values are `summary` and the operation object `responses`   
+The only required values are `summary` and the operation object `responses`  
 The `summary` field provides a brief, human-readable description of the endpoint.  
 <br>
 In the `responses` section, we define the possible responses that the API can return when that endpoint is accessed. It contains the HTTP status codes and their corresponding descriptions.  
@@ -101,14 +102,57 @@ Optionally, the `responses` section includes details about the response payload,
 <br>
 ```yaml
 paths:
-  /users:
+  /houses:
     get:
-      summary: Retrieves a list of users
+      operationId: gethouses
+      summary: Retrieve all Harry Potter houses
       responses:
-        '200':
-          description: A list of users
+        "200":
+          description: Success
 ```
 
-> - ref: [OpenAPI Specification](https://swagger.io/specification/)<br>
-> - ref: [Microsoft Learn Build Plugins](https://learn.microsoft.com/en-us/copilot-plugins/get-started)
-> - ref: [Security CoPilot Plugins](https://learn.microsoft.com/en-us/security-copilot/plugin_api)
+## Parameter Object
+
+You don't have to use the parameter object, but it's handy when making a plugin for CoPilot(s).  
+If you include the parameter object in the path item, the parameters will affect all actions on that path.  
+Alternatively, you can place parameters in the operations object, where they'll only affect that specific action.  
+<br>
+Depending on the API, the parameters can reside in different locations, indicated by the in field.  
+<br>
+
+### example parameter in **path**
+
+```yaml
+paths:
+  /houses/{id}:
+    get:
+      parameters:
+      - name: id
+        in: path
+        required: true
+```
+
+In this example the parameter value is part the path:
+```
+https://api.example.com/houses/{id}
+```
+<br>
+
+### example parameter in **query**
+
+```yaml
+paths:
+  /houses:
+    get:
+      parameters:
+      - name: id
+        in: query
+```
+
+In this example the parameter value is part the query
+
+```
+https://api.example.com/houses?id=Gryffindor
+```
+>- NOTE: if the parameter is `in` the query, the name of the query parameter `id` is automatically added the the uri!
+
