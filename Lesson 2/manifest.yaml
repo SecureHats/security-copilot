@@ -1,7 +1,7 @@
 Descriptor:
-  Name: BasicRequest
-  DisplayName: My First Plugin (BasicRequest)
-  Description: Lesson 1 - Plugin for requesting http headers from the incoming request.
+  Name: IpLocation
+  DisplayName: IP Lookup (Lesson 2)
+  Description: Lesson 2 - Understanding the OpenAPI Specification file.
 
 SkillGroups:
   - Format: API
