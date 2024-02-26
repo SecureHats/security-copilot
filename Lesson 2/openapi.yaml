@@ -17,7 +17,7 @@ paths:
                 "200":
                 description: Success
 
-    /wizards{FirstName}:
+    /wizards:
         get:
             operationId: getwizards
             summary: Retrieve Harry Potter wizards
@@ -31,3 +31,18 @@ paths:
             responses:
                 "200":
                     description: OK
+                      content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/wizards"
+components:
+    schemas:
+        wizards:
+            type: object
+            properties:
+                firstname:
+                    type: string
+                    description: The first name of the wizard
+                lastname:
+                    type: string
+                    description: The last name of the wizard
