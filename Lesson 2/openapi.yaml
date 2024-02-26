@@ -16,6 +16,7 @@ paths:
             responses:
                 "200":
                 description: Success
+
     /wizards{FirstName}:
         get:
             operationId: getwizards
@@ -26,6 +27,7 @@ paths:
                   schema:
                       type: string
                   required: true
+                  description: The name of the wizard
             responses:
                 "200":
-                description: Success
+                    description: OK
