@@ -6,10 +6,10 @@ info:
     version: "0.2.2"
 
 servers:
-    - url: https://api.ip2location.com/
+    - url: https://freeipapi.com
 
 paths:
-    /v2/{ip}:
+    /api/json/{ip}:
         get:
             operationId: lookupIpAddressGeolocation
             summary: Lookup IP Address Geolocation information
