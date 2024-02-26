@@ -6,21 +6,16 @@ info:
     version: "0.2.2"
 
 servers:
-    - url: https://freeipapi.com/
+    - url: http://ip-api.com/
 
 paths:
-    /api/json/{ip}:
+    /json/:
         get:
-            operationId: lookup
-            summary: Lookup IP Address Geolocation information
+            operationId: gethouses
+            summary: Retrieve all Harry Potter houses
             parameters:
-                - in: path
-                  name: ip
-                  required: true
+              - name: ip
+                in: query
             responses:
                 "200":
-                    description: OK
-                "400":
-                    description: Bad Request
-                "404":
-                    description: Not Found
+                    description: Success
