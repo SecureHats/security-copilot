@@ -9,14 +9,18 @@ servers:
     - url: http://ip-api.com/
 
 paths:
-    /json/{ip}:
+    /{ip}:
         get:
-            operationId: lookupIpAddressGeolocation
+            operationId: lookup
             summary: Lookup IP Address Geolocation information
             parameters:
-                - in: path
+                - in: query
                   name: ip
                   required: true
             responses:
                 "200":
                     description: OK
+                "400":
+                    description: Bad Request
+                "404":
+                    description: Not Found
