@@ -11,7 +11,7 @@ servers:
 paths:
     /json/:
         get:
-            operationId: gethouses
+            operationId: getaddresses
             summary: Retrieve all Harry Potter houses
             parameters:
               - name: ip
