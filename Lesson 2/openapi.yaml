@@ -1,0 +1,40 @@
+openapi: 3.0.0
+
+info:
+    title: lesson2-weather
+    description: Lesson 2 - Basic request to weather API.
+    version: "0.1.0"
+
+servers:
+    - url: https://api.ip2location.io/
+
+paths:
+    /ip:
+        get:
+            summary: retrieve the geographical location of the IP address.
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/metadata"
+                401:
+                    description: Unsuccessful authentication.
+components:
+    schemas:
+        metadata:
+            type: object
+            properties:
+                ip:
+                    type: string
+                    description: unique reference number.
+                country_code:
+                    type: string
+                    description: URL of the request.
+                country_code:
+                    type: string
+                    description: Two-character country code based on ISO 3166.
+                asn:
+                    type: string
+                    description: Autonomous system number (ASN).
