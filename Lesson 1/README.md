@@ -2,6 +2,9 @@
 =========
 # Microsoft CoPilot for Security
 
+#### 🎓 Level: 100 (Beginner)
+#### ⌛ Estimated time to complete this lab: 20 minutes
+
 ## Lesson 1
 
 In this first lesson, we'll cover the basics of creating a plugin for Microsoft CoPilot for Security. By the end, you'll understand the essential parts needed to make a plugin and be able to use the template we provide.
