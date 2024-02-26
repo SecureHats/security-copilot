@@ -142,17 +142,19 @@ https://api.example.com/houses/{id}
 
 ```yaml
 paths:
-  /houses:
+  /wizards:
     get:
       parameters:
-      - name: id
+      - name: firstname
         in: query
 ```
 
 In this example the parameter value is part the query
 
 ```
-https://api.example.com/houses?id=Gryffindor
+https://api.example.com/wizards?firstname=George
 ```
->- NOTE: if the parameter is `in` the query, the name of the query parameter `id` is automatically added the the uri!
+<br>
+
+>- NOTE: if the parameter is `in` the query, the name of the query parameter `firstname` is automatically added the the uri
 
