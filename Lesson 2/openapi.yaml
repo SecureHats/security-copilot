@@ -6,22 +6,56 @@ info:
     version: "0.1.0"
 
 servers:
-    - url: https://api.ip2location.io/
+    - url: https://freeipapi.com/api/
 
 paths:
-    /ip/{ip}:
+    /json/{ipaddress}:
         get:
             operationId: lookupIpAddressGeolocation
-            summary: retrieve the geographical location of the IP address.
+            summary: Lookup IP Address Geolocation information
             parameters:
-                - in: query
-                  name: ip
+                - in: path
+                  name: ipaddress
                   schema:
                       type: string
-                  required: false
+                  required: true
                   description: The ip address to lookup
             responses:
                 "200":
                     description: OK
-                401:
-                    description: Unsuccessful authentication.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/lookupIpAddressGeolocationResponse"
+components:
+    schemas:
+        lookupIpAddressGeolocationResponse:
+            type: object
+            properties:
+                ipVersion:
+                    type: integer
+                    description: The IP address version
+                ipAddress:
+                    type: string
+                    description: The IP address
+                latitude:
+                    type: number
+                    description: The latutude
+                longitude:
+                    type: number
+                    description: The longitude
+                countryName:
+                    type: string
+                    description: The country
+                zipCode:
+                    type: string
+                    description: The zip code
+                cityName:
+                    type: string
+                    description: The city
+                regionName:
+                    type: string
+                    description: The region
+                continent:
+                    type: string
+                    description: The continent
