@@ -6,4 +6,4 @@ Descriptor:
 SkillGroups:
   - Format: API
     Settings:
-      OpenApiSpecUrl: https://github.com/SecureHats/security-copilot/blob/f9682c752ba55cd0b84ad4bbb8d4fba272b2add2/Lesson%202/openapi.yaml
+      OpenApiSpecUrl: https://raw.githubusercontent.com/SecureHats/security-copilot/lesson-2/Lesson%202/openapi.yaml
