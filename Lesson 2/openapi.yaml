@@ -9,9 +9,17 @@ servers:
     - url: https://api.ip2location.io/
 
 paths:
-    /ip:
+    /ip/{ipaddress}:
         get:
+            operationId: lookupIpAddressGeolocation
             summary: retrieve the geographical location of the IP address.
+            parameters:
+                - in: path
+                  name: ipaddress
+                  schema:
+                      type: string
+                  required: false
+                  description: The ip address to lookup
             responses:
                 "200":
                     description: OK
