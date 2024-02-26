@@ -16,6 +16,7 @@ paths:
             parameters:
               - name: ip
                 in: query
+                required: true
             responses:
                 "200":
                     description: Success
