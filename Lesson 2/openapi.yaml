@@ -3,19 +3,19 @@ openapi: 3.0.0
 info:
     title: lesson2-iplookup
     description: Lesson 2 - Basic request to IP lookup API.
-    version: "0.2.0"
+    version: "0.2.1"
 
 servers:
-    - url: http://ip-api.com/
+    - url: https://api.ip2location.io/
 
 paths:
-    /json/{ipaddress}:
+    /{ip}:
         get:
             operationId: lookupIpAddressGeolocation
             summary: Lookup IP Address Geolocation information
             parameters:
-                - in: path
-                  name: ipaddress
+                - in: query
+                  name: ip
                   required: true
             responses:
                 "200":
