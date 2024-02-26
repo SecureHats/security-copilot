@@ -6,7 +6,7 @@ info:
     version: "0.2.0"
 
 servers:
-    - url: https://freeipapi.com/api/
+    - url: https://ip-api.com/
 
 paths:
     /json/{ipaddress}:
