@@ -23,21 +23,3 @@ paths:
             responses:
                 "200":
                     description: OK
-                    content:
-                        application/json:
-                            schema:
-                                $ref: "#/components/schemas/lookupIpAddressGeolocationResponse"
-components:
-    schemas:
-        lookupIpAddressGeolocationResponse:
-            type: object
-            properties:
-                ipAddress:
-                    type: string
-                    description: The IP address
-                countryName:
-                    type: string
-                    description: The country
-                cityName:
-                    type: string
-                    description: The city
