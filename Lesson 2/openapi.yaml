@@ -32,30 +32,13 @@ components:
         lookupIpAddressGeolocationResponse:
             type: object
             properties:
-                ipVersion:
-                    type: integer
-                    description: The IP address version
                 ipAddress:
                     type: string
                     description: The IP address
-                latitude:
-                    type: number
-                    description: The latutude
-                longitude:
-                    type: number
                     description: The longitude
                 countryName:
                     type: string
                     description: The country
-                zipCode:
-                    type: string
-                    description: The zip code
                 cityName:
                     type: string
                     description: The city
-                regionName:
-                    type: string
-                    description: The region
-                continent:
-                    type: string
-                    description: The continent
