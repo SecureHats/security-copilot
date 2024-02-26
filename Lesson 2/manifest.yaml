@@ -1,7 +1,7 @@
 Descriptor:
   Name: SecCheck
-  DisplayName: IP Lookup (Lesson 2)
-  Description: Lesson 2 - Understanding the OpenAPI Specification file.
+  DisplayName: IP Location Lookup (Lesson 2)
+  Description: Lesson 2 - Understanding the Open API Specification file.
 
 SkillGroups:
   - Format: API
