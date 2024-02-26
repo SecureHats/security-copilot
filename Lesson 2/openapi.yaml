@@ -16,12 +16,12 @@ paths:
             responses:
                 "200":
                 description: Success
-    /wizards:
+    /wizards{FirstName}:
         get:
             operationId: getwizards
             summary: Retrieve Harry Potter wizards
             parameters:
-                - name: FirstName
+            - name: FirstName
                 in: query
                 required: true
             responses:
