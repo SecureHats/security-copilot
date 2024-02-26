@@ -35,13 +35,6 @@ paths:
                         application/json:
                             schema:
                                 $ref: "#/components/schemas/wizards"
-            responses:
-                "200":
-                    description: OK
-                    content:
-                        application/json:
-                            schema:
-                                $ref: "#/components/schemas/lookupIpAddressGeolocationResponse"
 components:
     schemas:
         wizards:
