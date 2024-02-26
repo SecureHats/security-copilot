@@ -6,15 +6,15 @@ info:
     version: "0.2.2"
 
 servers:
-    - url: http://ip-api.com/
+    - url: https://freeipapi.com/
 
 paths:
-    /{ip}:
+    /api/json/{ip}:
         get:
             operationId: lookup
             summary: Lookup IP Address Geolocation information
             parameters:
-                - in: query
+                - in: path
                   name: ip
                   required: true
             responses:
