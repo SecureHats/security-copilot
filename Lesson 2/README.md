@@ -1,5 +1,7 @@
 ![logo](/images/sh-banner.png)
 =========
+[![Maintenance](https://img.shields.io/maintenance/yes/2024.svg?style=flat-square)]()
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)</br>
 
 # Microsoft Copilot for Security
 

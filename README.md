@@ -2,6 +2,8 @@
 
 ![logo](./images/sh-banner.png)
 =========
+[![Maintenance](https://img.shields.io/maintenance/yes/2024.svg?style=flat-square)]()
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)</br>
 
 This repository contains lessons as part of the Microsoft Copilot for Security walk trough series.  
 The series is a starting point for anyone willing to master the skills of creating custom Plugins for Microsoft Security Copilot.  
