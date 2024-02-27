@@ -221,6 +221,26 @@ The `responses` field describes the possible responses from the operation. Here,
 
 After we have added the plugin as described in [lesson 1](/Lesson%201/README.md) it is time to test it.
 
+### Harry Potter Houses
+
 1. Open a new Session in Microsoft CoPilot for Security
-2. 
+2. Let's ask a question about the houses in Harry Potter: **_What houses are there in Harry Potter_**
+>- NOTE: this prompt does **not** use the parameter object.
+
+![alt text](/images/houses.png)
+
+### Harry Potter Wizards
+
+1. Open a new Session in Microsoft CoPilot for Security
+2. Let's ask a question about a wizard: **_Give me some information about George Weasley_**
+>- NOTE: this prompt does **include** a parameter value which is **George**
+
 ![alt text](/images/wizards.png)
+
+## Summary
+In Lesson 2, we explored creating plugins for Microsoft CoPilot for Security using OpenAPI Specification (OAS).  
+We learned how to document APIs with OAS, focusing on key attributes like Info, Servers, Paths, and Parameters.  
+We also practiced creating a working example for querying Harry Potter information and tested it in CoPilot.
+<br>
+I didn't include details about how the response should be structured because right now it doesn't seem to make a difference in what we get back when we query an external API.  
+The other important observation is that I was not able to succesfully query and API if no OpenAPI Spec if published in the remote API.
