@@ -1,0 +1,32 @@
+openapi: 3.0.0
+
+info:
+    title: Lesson 2 lookup Harry Potter
+    description: Lesson 2 - Basic request to lookup Harry Potter information.
+    version: "0.2.2"
+
+servers:
+    - url: https://wizard-world-api.herokuapp.com/
+
+paths:
+    /houses:
+        get:
+            operationId: gethouses
+            summary: Retrieve all Harry Potter houses
+            responses:
+                "200":
+                description: Success
+    /wizards:
+        get:
+            operationId: getwizards
+            summary: Retrieve Harry Potter wizards
+            parameters:
+                - in: query
+                  name: FirstName
+                  schema:
+                      type: string
+                  required: true
+                  description: The name of the wizard
+            responses:
+                "200":
+                    description: OK

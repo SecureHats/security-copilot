@@ -1,0 +1,9 @@
+Descriptor:
+  Name: Lookup Harry Potter
+  DisplayName: Lookup Harry Potter information (Lesson 2)
+  Description: Lesson 2 - Understanding the Open API Specification file.
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://raw.githubusercontent.com/SecureHats/security-copilot/lesson-2/Lesson%202/openapi.yaml
