@@ -1,6 +1,6 @@
 Descriptor:
-  Name: HarryPotter
-  DisplayName: Lookup Harry Potter Houses (Lesson 2)
+  Name: Lookup Harry Potter
+  DisplayName: Lookup Harry Potter information (Lesson 2)
   Description: Lesson 2 - Understanding the Open API Specification file.
 
 SkillGroups:
