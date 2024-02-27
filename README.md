@@ -1,10 +1,10 @@
-# Microsoft CoPilot for Security
+# Microsoft Copilot for Security
 
 ![logo](./images/sh-banner.png)
 =========
 
-This repository contains lessons as part of the Microsoft CoPilot for Security walk trough series.  
-The series is a starting point for anyone willing to master the skills of creating custom Plugins for Microsoft Security CoPilot.  
+This repository contains lessons as part of the Microsoft Copilot for Security walk trough series.  
+The series is a starting point for anyone willing to master the skills of creating custom Plugins for Microsoft Security Copilot.  
 
 We will start with a very basic plugin and throughout the lessons advance to the more difficult scenarios
 

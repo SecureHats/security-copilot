@@ -1,22 +1,22 @@
 ![logo](/images/sh-banner.png)
 =========
-# Microsoft CoPilot for Security
+# Microsoft Copilot for Security
 
 #### 🎓 Level: 100 (Beginner)
 #### ⌛ Estimated time to complete this lab: 20 minutes
 
 ## Lesson 1
 
-In this first lesson, we will cover the basics of creating a plugin for Microsoft CoPilot for Security. By the end, you'll understand the essential parts needed to make a plugin and be able to use the template we provide.
+In this first lesson, we will cover the basics of creating a plugin for Microsoft Copilot for Security. By the end, you'll understand the essential parts needed to make a plugin and be able to use the template we provide.
 
-Microsoft CoPilot for Security comes with some pre-made plugins that users or organizations can turn on. But you can also make your plugin, which we'll focus on.
+Microsoft Copilot for Security comes with some pre-made plugins that users or organizations can turn on. But you can also make your plugin, which we'll focus on.
 
 Creating a plugin for an AI platform might seem daunting at first. I felt the same way, but breaking it down into smaller steps made it much more manageable. Let's dive in and make it easier to understand.
 
 
 ## Developing a Plugin
 
-A plugin for Microsoft CoPilot for Security consists of two main components:
+A plugin for Microsoft Copilot for Security consists of two main components:
 
 OpenAPI Specification:  
   This component describes how the API of the plugin works. It defines the endpoints, request and response formats, authentication mechanisms, and any other relevant details about the plugin's API.  
@@ -25,7 +25,7 @@ The OpenAPI specification provides a standardized way to document and communicat
 >- More information about the [OpenAPI Schema](https://github.com/OAI/OpenAPI-Specification/) (OAS) can be found here.
 
 Plugin Manifest:  
-  The plugin manifest file is used to explain to CoPilot how to use the plugin. It provides metadata and configuration information about the plugin, such as its name, version, author, dependencies, and any other necessary details. The manifest file helps CoPilot understand how to integrate and interact with the plugin.  
+  The plugin manifest file is used to explain to Copilot how to use the plugin. It provides metadata and configuration information about the plugin, such as its name, version, author, dependencies, and any other necessary details. The manifest file helps Copilot understand how to integrate and interact with the plugin.  
 
 Microsoft Copilot uses the following process flow when the user asks a question and Microsoft Copilot answers the question by searching for and using a plugin.  
 
@@ -65,7 +65,7 @@ SkillGroups:
 
 ### Creating our first manifest
 
-Now that we know what info we need for a manifest file, let's set it up for our first Microsoft CoPilot for Security plugin.  
+Now that we know what info we need for a manifest file, let's set it up for our first Microsoft Copilot for Security plugin.  
 1. Create a new file named `manifest.yaml`
 2. Copy and paste the following example into the manifest.yaml
 
@@ -81,12 +81,12 @@ SkillGroups:
       OpenApiSpecUrl: https://raw.githubusercontent.com/SecureHats/security-copilot/da70fb9b970d5b95faff462dff8491d46ac7d71a/Lesson%201/openapi.yaml
 ```
 
-> NOTE: The `Name` is the command to be used in the CoPilot Prompt to call the Plugin
+> NOTE: The `Name` is the command to be used in the Copilot Prompt to call the Plugin
 
 ## Adding a custom plugin
 
-1. Open the [Security CoPilot](https://securitycopilot.microsoft.com) portal and log in
-2. click on the **Security CoPilot plugin** button at the bottom right to open the _Manage plugins_ dialog
+1. Open the [Security Copilot](https://securitycopilot.microsoft.com) portal and log in
+2. click on the **Security Copilot plugin** button at the bottom right to open the _Manage plugins_ dialog
 3. scroll to the bottom section named **custom**
 4. select **Add plugin**
 5. upload the manifest.yaml file
@@ -98,12 +98,12 @@ Congratulations, you have now added your first **custom plugin**
 
 ## Testing the custom plugin
 
-Now that we've got our shiny new plugin installed in Microsoft CoPilot for Security, it's time to try it out and see how well it works.  
+Now that we've got our shiny new plugin installed in Microsoft Copilot for Security, it's time to try it out and see how well it works.  
 Let's kick off a new session and try adding the following request.
 
 ![prompt-message](/images/prompt-message.png)
 
-Microsoft CoPilot for Security successfully figured out and used the right plugin.  
+Microsoft Copilot for Security successfully figured out and used the right plugin.  
 It did this because we included a specific word, `BasicRequest`, in our question earlier.
 
 Now, if we examine the results more closely from what we asked before, we find these specific details:
@@ -118,8 +118,8 @@ Now, if we examine the results more closely from what we asked before, we find t
 
 ## Summary
 
-In this first lesson about Microsoft CoPilot for Security, we've covered the basics of creating a plugin for the platform.  
+In this first lesson about Microsoft Copilot for Security, we've covered the basics of creating a plugin for the platform.  
 With our plugin added, we tested it by making a request.  
-CoPilot successfully utilized the plugin, thanks to the keyword "BasicRequest" we included earlier.  Examining the results, we see the plugin's display name, details of the API call, and the response's header information.  
+Copilot successfully utilized the plugin, thanks to the keyword "BasicRequest" we included earlier.  Examining the results, we see the plugin's display name, details of the API call, and the response's header information.  
 </br>
-By following these steps, you've successfully created and integrated your first custom plugin into Microsoft CoPilot for Security!
+By following these steps, you've successfully created and integrated your first custom plugin into Microsoft Copilot for Security!
