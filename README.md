@@ -10,7 +10,7 @@ We will start with a very basic plugin and throughout the lessons advance to the
 
 ## Table of Contents
 
-[Lesson 1 - Basic Plugin](https://github.com/SecureHats/security-copilot/blob/main/Lesson%201/README.md) - Posted Februari 19, 2024
+[Lesson 1 - Basic Plugin](https://github.com/SecureHats/security-copilot/blob/main/Lesson%201/README.md) - Posted Februari 19, 2024  
 [Lesson 2 - OpenAPI Specification](https://github.com/SecureHats/security-copilot/blob/main/Lesson%202/README.md) - Posted Februari 27, 2024
 
 ## Not happy? :-(
