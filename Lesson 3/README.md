@@ -56,10 +56,6 @@ Let's take a look at an example of an openapi manifest file. This file is setup 
 ```
 [source](https://hacktrack.routum.io/.well-known/ai-plugin.json)
 
-Comparing the manifest file for Microsoft Copilot, as discussed in Lesson 1, but in `JSON` format reveals significant differences between the files.  
-When uploading an OpenAPI plugin manifest to Microsoft Copilot for Security, the file undergoes conversion to the Microsoft Copilot format in the background, as shown in the following image.
-
-![alt text](/images/payload-openapi-manifest.png)
 
 The output displayed below showcases the redacted payload of the previous OpenAPI manifest file once it's uploaded to Microsoft Copilot portal.  
 This transformation highlights how the OpenAPI manifest file converts to the Copilot format, streamlining integration and enhancing functionality.  
@@ -86,11 +82,31 @@ This transformation highlights how the OpenAPI manifest file converts to the Cop
     ]
 }
 ```
-
-Another observation from inspecting the payload is that API functions as described in the linked OpenAPI Specification are also processed an populated.  
-This can be seen under the `skills` section in the payload and shown in the next 2 code snippet(s).  
 <br>
-The first snippet shows the payload from the portal when uploading the plugin
+
+I have created a table to map the values from the OpenAPI manifest to the Copilot manifest as a reference.  
+
+| **OpenAPI manifest** | **Copilot manifest** |
+| --- | --- |
+| name_for_human | displayName |
+| name_for_model | name |
+| description_for_human | description |
+| description_for_model | description |
+| auth | supportedAuthTypes |
+| logo_url | icon |
+
+Comparing the manifest file for Microsoft Copilot, as discussed in Lesson 1, but in `JSON` format reveals significant differences between the files.  
+When uploading an OpenAPI plugin manifest to Microsoft Copilot for Security, the file undergoes conversion to the Microsoft Copilot format in the background, as shown in the following image.
+
+![alt text](/images/payload-openapi-manifest.png)
+
+## What more
+Here's another cool thing we noticed when checking out the payload.  
+The API functions described in the linked OpenAPI Specification are also being processed and added.  
+You can find this in the 'skills' section of the payload, and we'll show you in the next two code snippets.  
+<br>
+
+The first snippet gives a peek at the information sent from the portal when you upload the plugin.  
 
 ```json
 "skills": [
@@ -121,8 +137,10 @@ The first snippet shows the payload from the portal when uploading the plugin
             ],
 ```
 <br>
-This second snippet shows the openapi.yaml specification that is referenced in the manifest file under the `OpenApiSpecUrl` parameter.  
 
+This next snippet displays the openapi.yaml specification mentioned in the manifest file, which is identified by the OpenApiSpecUrl parameter.  
+
+<br>
 
 ```yaml
 ...
@@ -141,5 +159,13 @@ paths:
         description: The email of the user.
 ...
 ```
+[full OpenApi Spec](https://hacktrack.routum.io/openapi.yaml)  
+
+Based on this observation it would mean that once the plugin's manifest is uploaded, there's no ongoing connection between the plugin and the API documentation file (OpenAPI Spec).  
+So, if the OpenAPI spec changes after the plugin is deployed, those updates won't automatically show up in the plugin's output.  
+
+> - NOTE: This is an assumpion based on inspecting the output the previous payload.
+
+
 
 # Stay tuned for more information
