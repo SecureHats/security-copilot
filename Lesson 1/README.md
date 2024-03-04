@@ -10,12 +10,9 @@
 
 ## Lesson 1
 
-In this first lesson, we will cover the basics of creating a plugin for Microsoft Copilot for Security. By the end, you'll understand the essential parts needed to make a plugin and be able to use the template we provide.
-
-Microsoft Copilot for Security comes with some pre-made plugins that users or organizations can turn on. But you can also make your plugin, which we'll focus on.
-
-Creating a plugin for an AI platform might seem daunting at first. I felt the same way, but breaking it down into smaller steps made it much more manageable. Let's dive in and make it easier to understand.
-
+In this first lesson, we will cover the basics of creating a plugin for Microsoft Copilot for Security. By the end, you'll understand the essential parts needed to make a plugin and be able to use the template we provide.  
+Microsoft Copilot for Security comes with some pre-made plugins that users or organizations can turn on. But you can also make your plugin, which we'll focus on.  
+Creating a plugin for an AI platform might seem daunting at first. I felt the same way, but breaking it down into smaller steps made it much more manageable. Let's dive in and make it easier to understand.  
 
 ## Developing a Plugin
 
