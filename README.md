@@ -14,7 +14,8 @@ We will start with a very basic plugin and throughout the lessons advance to the
 
 [Lesson 1 - Basic Plugin](https://github.com/SecureHats/security-copilot/blob/main/Lesson%201/README.md) - Posted Februari 19, 2024  
 [Lesson 2 - OpenAPI Specification](https://github.com/SecureHats/security-copilot/blob/main/Lesson%202/README.md) - Posted Februari 27, 2024  
-[Lesson 3 - Difference between Security Copilot plugin and OpenAI plugin](https://github.com/SecureHats/security-copilot/blob/main/Lesson%203/README.md) - In progress  
+[Lesson 3 - Difference between Security Copilot plugin and OpenAI plugin](https://github.com/SecureHats/security-copilot/blob/main/Lesson%203/README.md) - Almost finished  
+[Lesson 4 - Handling Authentication](https://github.com/SecureHats/security-copilot/blob/main/Lesson%204/README.md) - No available yet  
 
 ## Not happy? :-(
 
