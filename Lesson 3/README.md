@@ -100,8 +100,8 @@ When uploading an OpenAPI plugin manifest to Microsoft Copilot for Security, the
 
 ![alt text](/images/payload-openapi-manifest.png)
 
-## What more
 Here's another cool thing we noticed when checking out the payload.  
+<br>
 The API functions described in the linked OpenAPI Specification are also being processed and added.  
 You can find this in the 'skills' section of the payload, and we'll show you in the next two code snippets.  
 <br>
