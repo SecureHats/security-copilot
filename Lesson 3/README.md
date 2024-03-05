@@ -86,16 +86,16 @@ This transformation highlights how the OpenAPI manifest file converts to the Cop
 ```
 <br>
 If we compare the manifest files for plugins, it reveals significant differences between the files.  
-When uploading an OpenAPI plugin manifest to Microsoft Copilot for Security, the file undergoes conversion to the Microsoft Copilot format in the background, as shown in the image.
+When uploading an OpenAPI plugin manifest to Microsoft Copilot for Security, the file undergoes conversion to the Microsoft Copilot format in the background, as shown in the image.  
+
+<br>
 
 ![alt text](/images/payload-openapi-manifest.png)
-<br>
 
-Here's another cool thing we noticed when checking out the payload.  
-<br>
+### Here's another cool thing we noticed when checking out the payload.  
+
 The API functions described in the linked OpenAPI Specification are also being processed and added.  
 You can find this in the 'skills' section of the payload, and we'll show you in the next two code snippets.  
-<br>
 
 The first snippet gives a peek at the information sent from the portal when you upload the plugin.  
 
