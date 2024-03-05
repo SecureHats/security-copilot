@@ -9,7 +9,7 @@
 
 >- NOTE: This next lesson is still in development.
 
-In the 2nd lesson, we learned the fundamentals of making an OpenAPI Specification (swagger) for Microsoft Security Copilot.  
+In the [2nd lesson](/Lesson%202/README.md), we learned the fundamentals of making an OpenAPI Specification (swagger) for Microsoft Security Copilot.  
 We have created our own OpenAPI Specification that is used to query a public API containing intel on Harry Potter.  
 <br>
 In this next lesson, we will take a look into the difference between the `Security Copilot plugin` and the `OpenAI plugin`.  

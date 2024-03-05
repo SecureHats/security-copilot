@@ -1,0 +1,20 @@
+{
+    "descriptor": {
+        "name": "",
+        "description": "",
+        "displayName": "",
+        "icon": "",
+        "authorization": null,
+        "supportedAuthTypes": [
+            "None"
+        ]
+    },
+    "skillGroups": [
+        {
+            "format": "API",
+            "settings": {
+                "OpenApiSpecUrl": ""
+            }
+        }
+    ]
+}
