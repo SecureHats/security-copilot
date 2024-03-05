@@ -28,6 +28,8 @@ At the end of this lesson, you will be able to explain the difference and you wi
 
 As we delve deeper into the plugin manifests, it becomes clear that they are the building blocks to create a relationship between AI and external APIs  
 
+## Different Manifests
+
 The OpenAPI plugin uses JSON format and has a different setup compared to the manifest file used in a Microsoft CoPilot plugin.  
 This isn't surprising because the OpenAPI plugin follows the guidelines outlined in the ChatGPT documentation.  
 Microsoft has created a helpful table that lists all the necessary properties in the OpenAPI plugin manifest file. You can check it out [here](https://learn.microsoft.com/en-us/copilot-plugins/overview#plugin-manifest-fields)  
@@ -83,22 +85,11 @@ This transformation highlights how the OpenAPI manifest file converts to the Cop
 }
 ```
 <br>
-
-I have created a table to map the values from the OpenAPI manifest to the Copilot manifest as a reference.  
-
-| **OpenAPI manifest** | **Copilot manifest** |
-| --- | --- |
-| name_for_human | displayName |
-| name_for_model | name |
-| description_for_human | description |
-| description_for_model | description |
-| auth | supportedAuthTypes |
-| logo_url | icon |
-
-Comparing the manifest file for Microsoft Copilot, as discussed in Lesson 1, but in `JSON` format reveals significant differences between the files.  
-When uploading an OpenAPI plugin manifest to Microsoft Copilot for Security, the file undergoes conversion to the Microsoft Copilot format in the background, as shown in the following image.
+If we compare the manifest files for plugins, it reveals significant differences between the files.  
+When uploading an OpenAPI plugin manifest to Microsoft Copilot for Security, the file undergoes conversion to the Microsoft Copilot format in the background, as shown in the image.
 
 ![alt text](/images/payload-openapi-manifest.png)
+<br>
 
 Here's another cool thing we noticed when checking out the payload.  
 <br>
@@ -166,6 +157,27 @@ So, if the OpenAPI spec changes after the plugin is deployed, those updates won'
 
 > - NOTE: This is an assumpion based on inspecting the output the previous payload.
 
+## Mapping values
+
+I have created a table to map the values from the OpenAPI manifest to the Copilot manifest as a reference.  
+
+| **OpenAPI manifest** | **Copilot manifest** |
+| --- | --- |
+| name_for_human | displayName |
+| name_for_model | name |
+| description_for_human | description |
+| description_for_model | description |
+| auth | supportedAuthTypes |
+| logo_url | icon |
+
+## Summary
+
+Lesson 3 covers the differences between the Security Copilot plugin and the OpenAI plugin. It explains that plugins act as a bridge between powerful language models like ChatGPT and third-party applications, allowing seamless interaction with APIs.  
+The lesson explores the role of manifests in defining plugin behavior and capabilities, highlighting the distinctions between OpenAPI and Microsoft Copilot manifests.  
+We have demonstrated how an OpenAPI manifests is converted to Copilot format upon upload, and discusses how API functions are processed and added to the plugin's output.  
+Additionally, we noticed that once a plugin's manifest is uploaded, there is no ongoing connection with the API documentation, meaning that changes to the OpenAPI spec won't automatically reflect in the plugin's output.  
+<br>
+Finally, a table mapping values from the OpenAPI manifest to the Copilot manifest is provided as a reference.
 
 
 # Stay tuned for more information
