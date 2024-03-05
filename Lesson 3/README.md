@@ -88,7 +88,7 @@ This transformation highlights how the OpenAPI manifest file converts to the Cop
 If we compare the manifest files for plugins, it reveals significant differences between the files.  
 When uploading an OpenAPI plugin manifest to Microsoft Copilot for Security, the file undergoes conversion to the Microsoft Copilot format in the background, as shown in the image.  
 
-<br>
+<br>  
 
 ![alt text](/images/payload-openapi-manifest.png)
 
@@ -174,9 +174,10 @@ I have created a table to map the values from the OpenAPI manifest to the Copilo
 
 Lesson 3 covers the differences between the Security Copilot plugin and the OpenAI plugin. It explains that plugins act as a bridge between powerful language models like ChatGPT and third-party applications, allowing seamless interaction with APIs.  
 The lesson explores the role of manifests in defining plugin behavior and capabilities, highlighting the distinctions between OpenAPI and Microsoft Copilot manifests.  
+
 We have demonstrated how an OpenAPI manifests is converted to Copilot format upon upload, and discusses how API functions are processed and added to the plugin's output.  
 Additionally, we noticed that once a plugin's manifest is uploaded, there is no ongoing connection with the API documentation, meaning that changes to the OpenAPI spec won't automatically reflect in the plugin's output.  
-<br>
+
 Finally, a table mapping values from the OpenAPI manifest to the Copilot manifest is provided as a reference.
 
 
