@@ -5,7 +5,7 @@
 
 # Microsoft Copilot for Security
 
-## Lesson 3 (DRAFT)
+## Lesson 3
 
 >- NOTE: This next lesson is still in development.
 
@@ -155,7 +155,7 @@ paths:
 Based on this observation it would mean that once the plugin's manifest is uploaded, there's no ongoing connection between the plugin and the API documentation file (OpenAPI Spec).  
 So, if the OpenAPI spec changes after the plugin is deployed, those updates won't automatically show up in the plugin's output.  
 
-> - NOTE: This is an assumpion based on inspecting the output the previous payload.
+> - NOTE: This is an assumption based on inspecting the output of the previous payload.
 
 ## Mapping values
 
@@ -175,7 +175,7 @@ I have created a table to map the values from the OpenAPI manifest to the Copilo
 Lesson 3 covers the differences between the Security Copilot plugin and the OpenAI plugin. It explains that plugins act as a bridge between powerful language models like ChatGPT and third-party applications, allowing seamless interaction with APIs.  
 The lesson explores the role of manifests in defining plugin behavior and capabilities, highlighting the distinctions between OpenAPI and Microsoft Copilot manifests.  
 
-We have demonstrated how an OpenAPI manifests is converted to Copilot format upon upload, and discusses how API functions are processed and added to the plugin's output.  
+We have demonstrated how an OpenAPI manifest is converted to Copilot format upon upload and discussed how API functions are processed and added to the plugin's output.  
 Additionally, we noticed that once a plugin's manifest is uploaded, there is no ongoing connection with the API documentation, meaning that changes to the OpenAPI spec won't automatically reflect in the plugin's output.  
 
 Finally, a table mapping values from the OpenAPI manifest to the Copilot manifest is provided as a reference.
