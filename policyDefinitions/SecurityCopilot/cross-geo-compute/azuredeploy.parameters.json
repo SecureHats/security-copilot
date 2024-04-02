@@ -15,10 +15,7 @@
     "crossGeoCompute": {
         "type": "String",
         "defaultValue": "Allowed",
-        "allowedValues": [
-            "Allowed",
-            "NotAllowed"
-        ],
+        "allowedValues": [ "Allowed", "NotAllowed" ],
         "metadata": {
             "displayName": "Cross Geo Location",
             "description": "Allow Copilot to evaluate prompts cross region"
