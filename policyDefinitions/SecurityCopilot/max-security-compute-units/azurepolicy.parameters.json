@@ -1,23 +1,23 @@
 {
   "numberOfUnits": {
-      "type": "Integer",
-      "defaultValue": 1,
-      "metadata": {
-          "displayName": "Number of Units",
-          "description": "Maximum number of SCU allowed"
-      }
+    "type": "Integer",
+    "defaultValue": 1,
+    "metadata": {
+      "displayName": "Number of Units",
+      "description": "Maximum number of SCU allowed"
+    }
   },
-"effectType": {
-      "type": "String",
-      "defaultValue": "Deny",
-      "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
-      ],
-      "metadata": {
-          "displayName": "Effect",
-          "description": "Audit or Deny the deployment of the resource"
-      }
+  "effectType": {
+    "type": "String",
+    "defaultValue": "Deny",
+    "allowedValues": [
+      "Audit",
+      "Deny",
+      "Disabled"
+    ],
+    "metadata": {
+      "displayName": "Effect",
+      "description": "Audit or Deny the deployment of the resource"
+    }
   }
 }
