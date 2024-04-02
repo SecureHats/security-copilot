@@ -1,0 +1,24 @@
+{
+    "effectType": {
+        "type": "String",
+        "defaultValue": "Deny",
+        "allowedValues": [
+            "Audit",
+            "Deny",
+            "Disabled"
+        ],
+        "metadata": {
+            "displayName": "Effect",
+            "description": "Audit or Deny the deployment of the resource"
+        }
+    },
+    "geo": {
+        "type": "String",
+        "defaultValue": "EU",
+        "allowedValues": [ "EU", "US", "UK", "AU" ],
+        "metadata": {
+            "displayName": "location",
+            "description": "Location for prompt evaluation"
+        }
+    }
+}
