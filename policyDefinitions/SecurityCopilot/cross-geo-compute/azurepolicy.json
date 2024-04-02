@@ -1,0 +1,60 @@
+{
+    "name": "f9e11309-806f-4995-a2f0-0778df970034",
+    "type": "Microsoft.Authorization/policyDefinitions",
+    "properties": {
+        "displayName": "[Preview] - Copilot for Security Allow Cross Geo location.",
+        "description": "Allow Copilot for Security to evaluate prompts anywhere in the world",
+        "mode": "All",
+        "metadata": {
+            "version": "1.0.0-preview",
+            "category": "security",
+            "preview": true
+        },
+        {
+            "parameters": {
+                "effectType": {
+                    "type": "String",
+                    "defaultValue": "Deny",
+                    "allowedValues": [
+                        "Audit",
+                        "Deny",
+                        "Disabled"
+                    ],
+                    "metadata": {
+                        "displayName": "Effect",
+                        "description": "Audit or Deny the deployment of the resource"
+                    }
+                },
+                "crossGeoCompute": {
+                    "type": "String",
+                    "defaultValue": "Allowed",
+                    "allowedValues": [
+                        "Allowed",
+                        "NotAllowed"
+                    ],
+                    "metadata": {
+                        "displayName": "Cross Geo Location",
+                        "description": "Allow Copilot to evaluate prompts cross region"
+                    }
+                }
+            },
+            "policyRule": {
+                "if": {
+                    "allOf": [
+                        {
+                            "field": "type",
+                            "equals": "Microsoft.SecurityCopilot/capacities"
+                        },
+                        {
+                            "field": "Microsoft.SecurityCopilot/capacities/properties.crossGeoCompute",
+                            "notEquals": "parameters('crossGeoCompute')"
+                        }
+                    ]
+                },
+                "then": {
+                    "effect": "[parameters('effectType')]"
+                }
+            }
+        }
+    }
+}
