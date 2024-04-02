@@ -1,0 +1,55 @@
+{
+    "name": "5641a60d-0ac0-46b5-9eb2-4f71c2d09926",
+    "type": "Microsoft.Authorization/policyDefinitions",
+    "properties": {
+        "displayName": "[Preview] - Copilot prompt evalutation location.",
+        "description": "This selection will affect where your prompts are evaluated and how your usage is priced.",
+        "mode": "All",
+        "metadata": {
+            "version": "1.0.0-preview",
+            "category": "security",
+            "preview": true
+        },
+        "parameters": {
+            "effectType": {
+                "type": "String",
+                "defaultValue": "Deny",
+                "allowedValues": [
+                    "Audit",
+                    "Deny",
+                    "Disabled"
+                ],
+                "metadata": {
+                    "displayName": "Effect",
+                    "description": "Audit or Deny the deployment of the resource"
+                }
+            },
+            "geo": {
+                "type": "String",
+                "defaultValue": "EU",
+                "allowedValues": [ "EU", "US", "UK", "AU"]
+                "metadata": {
+                    "displayName": "location",
+                    "description": "Location for prompt evaluation"
+                }
+            }
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.SecurityCopilot/capacities"
+                    },
+                    {
+                        "field": "Microsoft.SecurityCopilot/capacities/properties.geo",
+                        "notEquals": "parameters('geo')"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "[parameters('effectType')]"
+            }
+        }
+    }
+}
