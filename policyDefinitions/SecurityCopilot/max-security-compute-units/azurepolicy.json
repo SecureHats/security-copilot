@@ -1,97 +1,54 @@
 {
-  "name": "5641a60d-0ac0-46b5-9eb2-4f71c2d09926",
-  "type": "Microsoft.Authorization/policyDefinitions",
-  "properties": {
-    "displayName": "[Preview] - Set Copilot for Security Unit allowance.",
-    "description": "Limit the amount of SCUs to assign to Copilot for Security.",
-    "mode": "All",
-    "metadata": {
-      "version": "1.0.0-preview",
-      "category": "security",
-      "preview": true
-    },
-    "parameters": {
-      "effectType": {
-        "type": "String",
-        "defaultValue": "Deny",
-        "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
-        ],
+    "name": "5641a60d-0ac0-46b5-9eb2-4f71c2d09926",
+    "type": "Microsoft.Authorization/policyDefinitions",
+    "properties": {
+        "displayName": "[Preview] - Set Copilot for Security Unit allowance.",
+        "description": "Limit the amount of SCUs to assign to Copilot for Security.",
+        "mode": "All",
         "metadata": {
-          "displayName": "Effect",
-          "description": "Audit or Deny the deployment of the resource"
-        }
-      },
-      "numberOfUnits": {
-        "type": "Integer",
-        "defaultValue": 1,
-        "metadata": {
-          "displayName": "Number of Units",
-          "description": "Maximum number of SCU allowed"
-        }
-      }
-    },
-    "policyRule": {
-      "if": {
-        "allOf": [
-          {
-            "field": "type",
-            "equals": "Microsoft.SecurityCopilot/capacities"
-          },
-          {
-            "field": "Microsoft.SecurityCopilot/capacities/numberOfUnits",
-            "greater": "parameters('numberOfUnits')"
-          }
-        ]
-      },
-      "then": {
-        "effect": "[parameters('effectType')]"
-      }
-    }
-  }
-},
-{
-  "mode": "Indexed",
-  "parameters": {
-    "effectType": {
-      "type": "String",
-      "defaultValue": "Deny",
-      "allowedValues": [
-        "Audit",
-        "Deny",
-        "Disabled"
-      ],
-      "metadata": {
-        "displayName": "Effect",
-        "description": "Audit or Deny the deployment of the resource"
-      }
-    },
-    "numberOfUnits": {
-      "type": "Integer",
-      "defaultValue": 1,
-      "metadata": {
-        "displayName": "Number of Units",
-        "description": "Maximum number of SCU allowed"
-      }
-    }
-  },
-  "policyRule": {
-    "if": {
-      "allOf": [
-        {
-          "field": "type",
-          "equals": "Microsoft.SecurityCopilot/capacities"
+            "version": "1.0.0-preview",
+            "category": "security",
+            "preview": true
         },
-        {
-          "field": "Microsoft.SecurityCopilot/capacities/numberOfUnits",
-          "greater": "parameters('numberOfUnits')"
+        "parameters": {
+            "effectType": {
+                "type": "String",
+                "defaultValue": "Deny",
+                "allowedValues": [
+                    "Audit",
+                    "Deny",
+                    "Disabled"
+                ],
+                "metadata": {
+                    "displayName": "Effect",
+                    "description": "Audit or Deny the deployment of the resource"
+                }
+            },
+            "numberOfUnits": {
+                "type": "Integer",
+                "defaultValue": 1,
+                "metadata": {
+                    "displayName": "Number of Units",
+                    "description": "Maximum number of SCU allowed"
+                }
+            }
+        },
+        "policyRule": {
+            "if": {
+                "allOf": [
+                    {
+                        "field": "type",
+                        "equals": "Microsoft.SecurityCopilot/capacities"
+                    },
+                    {
+                        "field": "Microsoft.SecurityCopilot/capacities/properties.numberOfUnits",
+                        "greater": "parameters('numberOfUnits')"
+                    }
+                ]
+            },
+            "then": {
+                "effect": "[parameters('effectType')]"
+            }
         }
-      ]
-    },
-    "then": {
-      "effect": "[parameters('effectType')]"
     }
-  }
 }
