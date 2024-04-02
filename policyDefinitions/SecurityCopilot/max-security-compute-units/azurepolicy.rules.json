@@ -6,7 +6,7 @@
         "equals": "Microsoft.SecurityCopilot/capacities"
       },
       {
-        "field": "Microsoft.SecurityCopilot/capacities/numberOfUnits",
+        "field": "Microsoft.SecurityCopilot/capacities/properties.numberOfUnits",
         "greater": "parameters('numberOfUnits')"
       }
     ]
