@@ -2,17 +2,16 @@
   "if": {
     "allOf": [
       {
-      "field": "type",
-      "equals": "Microsoft.SecurityCopilot/capacities"
+        "field": "type",
+        "equals": "Microsoft.SecurityCopilot/capacities"
       },
       {
-      "field": "Microsoft.SecurityCopilot/capacities/numberOfUnits",
-      "greater": "parameters('numberOfUnits')"
+        "field": "Microsoft.SecurityCopilot/capacities/numberOfUnits",
+        "greater": "parameters('numberOfUnits')"
       }
     ]
-    },
-    "then": {
-      "effect": "[parameters('effectType')]"
-    }
+  },
+  "then": {
+    "effect": "[parameters('effectType')]"
   }
 }
