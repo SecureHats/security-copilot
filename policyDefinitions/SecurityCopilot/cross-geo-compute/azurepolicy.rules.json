@@ -1,0 +1,17 @@
+{
+    "if": {
+        "allOf": [
+            {
+                "field": "type",
+                "equals": "Microsoft.SecurityCopilot/capacities"
+            },
+            {
+                "field": "Microsoft.SecurityCopilot/capacities/properties.crossGeoCompute",
+                "notEquals": "parameters('crossGeoCompute')"
+            }
+        ]
+    },
+    "then": {
+        "effect": "[parameters('effectType')]"
+    }
+}

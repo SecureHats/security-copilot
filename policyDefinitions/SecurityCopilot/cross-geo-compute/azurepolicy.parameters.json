@@ -1,0 +1,24 @@
+{
+    "effectType": {
+        "type": "String",
+        "defaultValue": "Deny",
+        "allowedValues": [
+            "Audit",
+            "Deny",
+            "Disabled"
+        ],
+        "metadata": {
+            "displayName": "Effect",
+            "description": "Audit or Deny the deployment of the resource"
+        }
+    },
+    "crossGeoCompute": {
+        "type": "String",
+        "defaultValue": "Allowed",
+        "allowedValues": [ "Allowed", "NotAllowed" ],
+        "metadata": {
+            "displayName": "Cross Geo Location",
+            "description": "Allow Copilot to evaluate prompts cross region"
+        }
+    }
+}
