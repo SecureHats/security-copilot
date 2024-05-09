@@ -19,4 +19,4 @@ Settings:
 SkillGroups:
   - Format: API
     Settings:
-      OpenApiSpecUrl: https://raw.githubusercontent.com/SecureHats/security-copilot/lesson-3/Lesson%203/openapi.yaml
+      OpenApiSpecUrl: https://raw.githubusercontent.com/SecureHats/security-copilot/main/Lesson%202/openapi.yaml
