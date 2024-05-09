@@ -3,7 +3,20 @@ Descriptor:
   DisplayName: My First Plugin (BasicRequest)
   Description: Lesson 1 - Plugin for requesting http headers from the incoming request.
 
+Settings:
+  - Name: InstanceURL
+    Label: Cyware Respond Instance URL
+    Description: The URL of the instance to connect to
+    HintText: "e.g. https://tenant.cyware.com"
+    SettingType: String
+    Required: true
+  - Name: User
+    Label: Name of the user
+    Description: The name of the user to display
+    HintText: "https://example.com"
+    SettingType: String
+    Required: true
 SkillGroups:
   - Format: API
     Settings:
-      OpenApiSpecUrl: https://raw.githubusercontent.com/SecureHats/security-copilot/lesson-4/Lesson%204/openapi.yaml
+      OpenApiSpecUrl: https://raw.githubusercontent.com/SecureHats/security-copilot/lesson-3/Lesson%203/openapi.yaml
