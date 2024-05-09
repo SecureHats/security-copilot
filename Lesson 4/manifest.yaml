@@ -20,3 +20,4 @@ SkillGroups:
   - Format: API
     Settings:
       OpenApiSpecUrl: https://raw.githubusercontent.com/SecureHats/security-copilot/main/Lesson%202/openapi.yaml
+      EndppontUrlSettingName: "InstanceURL"
