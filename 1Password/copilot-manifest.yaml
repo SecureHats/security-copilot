@@ -6,14 +6,13 @@ Descriptor:
     - ApiKey
   Authorization:
     Type: APIKey
-    Key: 1Password-api-token
+    Key: Key
     Location: Header
     AuthScheme: ''
   Icon: https://raw.githubusercontent.com/azurekid/Azure-Sentinel/master/Logos/1password.svg
   Settings:
   - Description: The URL of the instance to connect to
-    HintText: e.g. https://events.1password.com/api/v1/signinattempts
-    DefaultValue: https://events.1password.com/api/v1/signinattempts
+    HintText: e.g. https://events.[ent].***.com[.ca][.eu]
     Label: 1Password Instance URL
     Name: 1PasswordInstanceURL
     Required: true
@@ -24,3 +23,4 @@ SkillGroups:
     Settings:
       OpenApiSpecUrl: https://i.1password.com/media/1password-events-reporting/1password-events-api.yaml
       EndpointUrlSettingName: 1PasswordInstanceURL
+      
