@@ -9,7 +9,7 @@ Descriptor:
     Key: 1Password-api-token
     Location: Header
     AuthScheme: ''
-  Icon: https://github.com/SecureHats/security-copilot/blob/1password/1Password/1Password.png
+  Icon: https://raw.githubusercontent.com/azurekid/Azure-Sentinel/master/Logos/1password.svg
   Settings:
   - Description: The URL of the instance to connect to
     HintText: e.g. https://events.1password.com/api/v1/signinattempts
