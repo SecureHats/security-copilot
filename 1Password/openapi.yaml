@@ -1,0 +1,116 @@
+openapi: 3.0.0
+info:
+    title: Events API
+    description: 1Password Events API Specification.
+    version: 1.2.0
+servers:
+    - url: https://events.1password.com
+      description: 1Password
+paths:
+  /api/auth/introspect:
+      get:
+          summary: Performs introspection of the provided Bearer JWT token
+          deprecated: true
+          tags:
+              - auth
+          security:
+              - jwtsa: []
+          operationId: getAuthIntrospect
+          responses:
+              "200":
+                  $ref: "#/components/responses/IntrospectResponse"
+              "401":
+                  $ref: "#/components/responses/UnauthorizedErrorResponse"
+              "500":
+                  $ref: "#/components/responses/InternalServerErrorResponse"
+              default:
+                  $ref: "#/components/responses/GenericErrorResponse"
+components:
+    securitySchemes:
+        jwtsa:
+            type: http
+            description: A JWT SA token issued to this service
+            scheme: bearer
+            bearerFormat: JWT-SA
+    schemas:
+        Introspection:
+            type: object
+            properties:
+                UUID:
+                    type: string
+                IssuedAt:
+                    $ref: "#/components/schemas/DateTimeRFC3339"
+                Features:
+                    type: array
+                    items:
+                        type: string
+                    example: ["auditevents", "itemusages", "signinattempts"]
+        IntrospectionV2:
+            type: object
+            properties:
+                uuid:
+                    type: string
+                issued_at:
+                    $ref: "#/components/schemas/DateTimeRFC3339"
+                features:
+                    type: array
+                    items:
+                        type: string
+                    example: ["auditevents", "itemusages", "signinattempts"]
+responses:
+    SignInAttemptsResponse:
+        description: Sign-in attempts response object
+        content:
+            application/json:
+                schema:
+                    $ref: "#/components/schemas/SignInAttemptItems"
+    ItemUsagesResponse:
+        description: Item usages response object
+        content:
+            application/json:
+                schema:
+                    $ref: "#/components/schemas/ItemUsageItems"
+    AuditEventsResponse:
+        description: Audit events response object
+        content:
+            application/json:
+                schema:
+                    $ref: "#/components/schemas/AuditEventItems"
+    UnauthorizedErrorResponse:
+        description: Unauthorized
+        content:
+            application/json:
+                schema:
+                    $ref: "#/components/schemas/Error"
+    InternalServerErrorResponse:
+        description: Internal Server Error
+        content:
+            application/json:
+                schema:
+                    $ref: "#/components/schemas/Error"
+    IntrospectResponse:
+        description: Introspection object
+        content:
+            application/json:
+                schema:
+                    $ref: "#/components/schemas/Introspection"
+    IntrospectV2Response:
+        description: Introspection v2 object
+        content:
+            application/json:
+                schema:
+                    $ref: "#/components/schemas/IntrospectionV2"
+    GenericErrorResponse:
+        description: Generic error
+        content:
+            application/json:
+                schema:
+                    $ref: "#/components/schemas/Error"
+examples:
+    Cursor:
+        summary: Used for continued calling with a cursor
+        value:
+            { "cursor": "aGVsbG8hIGlzIGl0IG1lIHlvdSBhcmUgbG9va2luZyBmb3IK" }
+    ResetCursor:
+        summary: Used for reseting the cursor
+        value: { "limit": 100, "start_time": "2021-06-11T16:32:50-03:00" }
