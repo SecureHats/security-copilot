@@ -6,7 +6,7 @@ Descriptor:
     - ApiKey
   Authorization:
     Type: ServiceHttp
-    Key: Key
+    Key: Value
     Location: Header
     AuthScheme: ''
   Icon: https://raw.githubusercontent.com/azurekid/Azure-Sentinel/master/Logos/1password.svg
