@@ -1,0 +1,26 @@
+Descriptor:
+  Name: 1Password
+  DisplayName: 1Password audit API (Preview)
+  Description: The API plugin offers 3 skills that range from displaying Signin Attempts, Usage logs and Audit logs. 
+  SupportedAuthTypes:
+    - ApiKey
+  Authorization:
+    Type: APIKey
+    Key: 1Password-api-token
+    Location: Header
+    AuthScheme: ''
+  Icon: https://upload.wikimedia.org/wikipedia/commons/d/d7/1Password_icon_Android_circle.png
+  Settings:
+  - Description: The URL of the instance to connect to
+    HintText: e.g. https://events.1password.com/api/v1/signinattempts
+    DefaultValue: https://events.1password.com/api/v1/signinattempts
+    Label: 1Password Instance URL
+    Name: 1PasswordInstanceURL
+    Required: true
+    SettingType: String
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://i.1password.com/media/1password-events-reporting/1password-events-api.yaml
+      EndpointUrlSettingName: 1PasswordInstanceURL
