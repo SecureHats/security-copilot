@@ -9,7 +9,7 @@ Descriptor:
     Key: 1Password-api-token
     Location: Header
     AuthScheme: ''
-  Icon: https://upload.wikimedia.org/wikipedia/commons/d/d7/1Password_icon_Android_circle.png
+  Icon: https://github.com/SecureHats/security-copilot/blob/1password/1Password/1Password.png
   Settings:
   - Description: The URL of the instance to connect to
     HintText: e.g. https://events.1password.com/api/v1/signinattempts
